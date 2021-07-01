@@ -1,0 +1,169 @@
+            XSL - FO
+
+* Extensible StyleSheet Language formatting Objects.
+* is used to Formatting the XML Data for getting Output in page screen(pdf form)
+* W3C (World Wide Web) Consortium Recommendations
+
+XSLT - Transformming XML Document
+XSL - Styling XML Document
+XSL-FO - Formatting XML Document
+XPath - Navigating XML Document
+
+Document Structure :
+
+-----Prolog Section--------
+<? xml version:"1.0" encoding="UTF-8" ?>
+------root (contains all functionalities of current module)------
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format"> (fo: -> Namesapce [avoiding name conflicts; xmlns:fo -> attribute used to refering specified sources])
+
+<fo:layout-master-set>  ----> contains all templates/pages
+<fo:simple-page-master> ----> contains single template/page
+<fo:page-sequence>      ----> content of page
+<fo:block>              ----> it support to give block of content as output screen
+<fo:flow flow-name="xsl-region-body"> ---> defined flow of the output page
+
+
+XSL-FO Areas :
+
+---->Pages  (contains regions)
+----> Regions (region-body; region-start(left sidebar); region-end(right sidebar); region-before(header); region-after(footer))
+----> Block areas (Paragraphs,tables,list,...)
+----> Line areas (Text lines)
+----> Inline areas (bullets,graphics,character)
+
+
+XSL-FO Attributes :
+
+Page Size :
+
+---->page-width
+---->page-height
+
+Page/Block Margin :
+
+---->margin-top defines the top margin
+---->margin-bottom defines the bottom margin
+---->margin-left defines the left margin
+---->margin-right defines the right margin
+---->margin defines all four margins
+
+
+Block Border :
+
+border-style
+border-before-style
+border-after-style
+border-start-style
+border-end-style
+border-top-style (same as border-before)
+border-bottom-style (same as border-after)
+border-left-style (same as border-start)
+border-right-style (same as border-end)
+Border color attributes:
+
+border-color
+border-before-color
+border-after-color
+border-start-color
+border-end-color
+border-top-color (same as border-before)
+border-bottom-color (same as border-after)
+border-left-color (same as border-start)
+border-right-color (same as border-end)
+Border width attributes:
+
+border-width
+border-before-width
+border-after-width
+border-start-width
+border-end-width
+border-top-width (same as border-before)
+border-bottom-width (same as border-after)
+border-left-width (same as border-start)
+border-right-width (same as border-end)
+
+
+
+Block Padding :
+
+padding
+padding-before
+padding-after
+padding-start
+padding-end
+padding-top (same as padding-before)
+padding-bottom (same as padding-after)
+padding-left (same as padding-start)
+padding-right (same as padding-end)
+
+Block Background :
+
+background-color
+background-image
+background-repeat
+background-attachment (scroll or fixed)
+
+Font attributes:
+
+font-family
+font-weight
+font-style
+font-size
+font-variant
+
+
+Text attributes:
+
+text-align
+text-align-last
+text-indent
+start-indent
+end-indent
+wrap-option (defines word wrap)
+break-before (defines page breaks)
+break-after (defines page breaks)
+reference-orientation (defines text rotation in 90" increments)
+
+XSL-FO Lists :
+
+
+fo:list-block (contains the whole list)
+fo:list-item (contains each item in the list)
+fo:list-item-label (contains the label for the list-item - typically an <fo:block> containing a number, character, etc.)
+fo:list-item-body (contains the content/body of the list-item - typically one or more <fo:block> objects)
+
+XSL-FO Tables :
+
+fo:table-and-caption
+fo:table
+fo:table-caption
+fo:table-column
+fo:table-header
+fo:table-footer
+fo:table-body
+fo:table-row
+fo:table-cell
+
+
+
+
+
+XSL-Fo Document Structure :
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+
+<fo:layout-master-set>
+  <fo:simple-page-master master-name="A4">
+    <!-- Page template goes here -->
+  </fo:simple-page-master>
+</fo:layout-master-set>
+
+<fo:page-sequence master-reference="A4">
+  <!-- Page content goes here -->
+</fo:page-sequence>
+
+</fo:root>

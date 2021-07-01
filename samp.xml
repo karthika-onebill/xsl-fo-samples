@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="books(text).xsl"?>
+<bookstore>
+
+<book>
+<author_name>James Bonds</author_name>
+<title>Gift of Maggie</title>
+<price>23$</price>
+<description>Helps to understand the humanity and manpower</description>
+
+</book>
+
+<book>
+<author_name>Rio Bonds</author_name>
+<title>Fierce of fire</title>
+<price>92$</price>
+<description>Helps to understand the confidence and willpower</description>
+
+</book>
+
+<book>
+<author_name>APJ AbudulKalam</author_name>
+<title>Wings of fire</title>
+<price>58$</price>
+<description>Helps to motivate new generations youngsters</description>
+
+</book>
+
+<book>
+<author_name>Mahanthma Kandhi</author_name>
+<title>Violence maker</title>
+<price>13$</price>
+<description>Helps to understand the aspects of violence</description>
+
+</book>
+</bookstore>
